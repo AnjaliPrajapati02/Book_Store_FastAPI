@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Design by foolishdeveloper.com -->
+  <title>Sign-Up</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--Stylesheet-->
+  <style media="screen">
+    *,
+    *:before,
+    *:after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #080710;
+    }
+
+    .background {
+      width: 430px;
+      height: 520px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+
+    .background .shape {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .shape:first-child {
+      background: linear-gradient(#1845ad,
+          #23a2f6);
+      left: -80px;
+      top: -80px;
+    }
+
+    .shape:last-child {
+      background: linear-gradient(to right,
+          #ff512f,
+          #f09819);
+      right: -30px;
+      bottom: -80px;
+    }
+
+    form {
+      height: 600px;
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.13);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      padding: 50px 35px;
+    }
+
+    form * {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;
+    }
+
+    form h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    input {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 3px;
+      padding: 0 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    ::placeholder {
+      color: #e5e5e5;
+    }
+
+    button {
+      margin-top: 22px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #080710;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .social {
+      margin-top: 30px;
+      display: flex;
+    }
+
+    .social div {
+      background: red;
+      width: 150px;
+      border-radius: 3px;
+      padding: 5px 10px 10px 5px;
+      background-color: rgba(255, 255, 255, 0.27);
+      color: #eaf0fb;
+      text-align: center;
+    }
+
+    .social div:hover {
+      background-color: rgba(255, 255, 255, 0.47);
+    }
+
+    .social .fb {
+      margin-left: 25px;
+    }
+
+    .social i {
+      margin-right: 4px;
+    }
+
+    /* < !--*******************Radio button************************--> */
+    @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    body {
+      font-family: "Averia Serif Libre", cursive;
+      background-color: rgb(19, 18, 21);
+      color: #ffffff;
+    }
+
+    .radio-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10vh;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .radio-item [type="radio"] {
+      display: none;
+    }
+
+    .radio-item+.radio-item {
+      margin-top: 15px;
+    }
+
+    .radio-item label {
+      display: block;
+      padding: 10px 60px;
+      background: rgba(255, 255, 255, 0.07);
+      ;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 400;
+      min-width: 250px;
+      white-space: nowrap;
+      position: relative;
+      transition: 0.4s ease-in-out 0s;
+    }
+
+    .radio-item label:after,
+    .radio-item label:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .radio-item label:after {
+      height: 19px;
+      width: 19px;
+      border: 2px solid #524eee;
+      left: 14px;
+      top: calc(50% - 12px);
+    }
+
+    .radio-item label:before {
+      background: #524eee;
+      height: 20px;
+      width: 20px;
+      left: 21px;
+      top: calc(50%-5px);
+      transform: scale(5);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s ease-in-out 0s;
+    }
+
+    .radio-item [type="radio"]:checked~label {
+      border-color: #524eee;
+    }
+
+    .radio-item [type="radio"]:checked~label::before {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    /* //////////////////////////////
+ */
+
+    .radio-list {
+      display: flex;
+      flex-direction: row;
+      /* Display items horizontally */
+      justify-content: center;
+      /* Center items horizontally */
+      gap: 20px;
+      /* Add spacing between items */
+    }
+
+    .radio-item {
+      display: flex;
+      flex-direction: column-reverse;
+      /* Display radio items as columns */
+    }
+
+    .radio-item label {
+      padding: 10px 40px;
+      /* Adjust padding */
+      min-width: unset;
+      /* Remove minimum width */
+      white-space: nowrap;
+    }
+
+    .radio-item [type="radio"]:checked~label::before {
+      top: calc(50% - 5px);
+      /* Adjust top position */
+    }
+
+
+    /* Styles for the dropdown container */
+    :root {
+      --arrow-bg: rgba(255, 255, 255, 0.3);
+      --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+      --option-bg: white;
+      --select-bg: rgba(255, 255, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(35deg, red, purple);
+} */
+    /* <select> styles */
+    select {
+      /* Reset */
+      appearance: none;
+      border: 0;
+      outline: 0;
+      font: inherit;
+      /* Personalize */
+      width: 20rem;
+      padding: 1rem 4rem 1rem 1rem;
+      background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+        linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+      color: white;
+      border-radius: 0.25em;
+      box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+      /* Remove IE arrow */
+      &::-ms-expand {
+        display: none;
+      }
+
+      /* Remove focus outline */
+      &:focus {
+        outline: none;
+      }
+
+      /* <option> colors */
+      option {
+        color: inherit;
+        background-color: var(--option-bg);
+      }
+    }
+
+    select {
+      background-color: #080710; /* Change background color */
+
+    }
+  </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+      </div>
+    <form action="/edit/{{ user.id }}" method="post">
+        <h3>Edit</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ user.username }}">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" value="{{ user.password }}">
+
+        <section class="radio-section" name="role">
+          <div class="radio-list">
+            <div class="radio-item">
+              <input name="role" id="radio1" type="radio" value="student">
+              <label for="radio1">STUDENT</label>
+            </div>
+            <div class="radio-item">
+              <input name="role" id="radio2" type="radio" value="admin">
+              <label for="radio2">ADMIN</label>
+            </div>
+          </div>
+        </section>
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="Arts" {% if user.department == 'Arts' %} selected {% endif %}>Arts</option>
+            <option value="Commerce" {% if user.department == 'Commerce' %} selected {% endif %}>Commerce</option>
+            <option value="Engineering" {% if user.department == 'Engineering' %} selected {% endif %}>Engineering</option>
+        </select>
+        <button type="submit">Update</button>
+    </form>
+</body>
+
+</html>
